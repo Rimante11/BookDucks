@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js" integrity="sha512-bPh3uwgU5qEMipS/VOmRqynnMXGGSRv+72H/N260MQeXZIK4PG48401Bsby9Nq5P5fz7hy5UGNmC/W1Z51h2GQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="style2.css">
+  <title>Document</title>
+</head>
+<body>
+
+  <header>
+    <div class="topContainer">
+      <div class="top">
+          <img src="./images/blobgrey.svg" alt="Blob grey" id="logoBlob">
+          <img src="./images/duckFace.png" alt="" id="duckFace">
+      </div>
+      <div class="top">
+          <h1 class="bookDucksText">BookDucks</h1>
+      </div>
+    </div>
+
+  </header>
+
+      <nav class="profileNav">  
+        <button id="logoutBtn" onclick="logOutProfile()" class="logOutUser">
+          <a href="index2.html">Log out</a>
+        </button>
+      </nav>  
+      <div id="userInfoField" class="aboutUserProfile">
+      <img id="userIcon" src="./images/clipart162671.png" alt="User Icon" class="userProfileImg">
+
+      <div id="profileContainer">
+        <h3 id="usernameProfile"></h3>
+        <p id="useridProfile"></p>
+        <p id="useremailProfile"></p>
+        <p id="regdateProfile"></p>
+      </div>
+  </div>
+
+  <div class="bg-modal">
+    <div class="modal-content">
+      <form>
+        <div class="close">+</div>
+        <label for="booktitle">Title</label><br>
+        <input type="text" id="booktitle" class="addBookInput"><br>
+        <label for="bookauthor">Author</label><br>
+        <input type="text" id="bookauthor" class="addBookInput"><br>
+        <label for="bookpages">Pages</label><br>
+        <input type="number" id="bookpages" class="addBookInput"><br>
+        <label for="bookgrade">Rate</label><br>
+        <input type="number" id="bookgrade" class="addBookInput"><br>
+        <label for="bookgenre">Genre</label><br>
+        <input type="text" id="bookgenre" class="addBookInput"><br>
+        <label for="bookImage">Image</label><br>
+        <input type="file" id="bookImage" class="chooseFileBtn"><br><br>
+        <button id="uploadBook" class="addBookBtn" >Add book</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="bg-modal2">
+    <div class="modal-content2">
+      <form>
+        <div class="close2">+</div>
+        <label for="booktitle">Title</label><br>
+        <input type="text" id="booktitle" class="addBookInput"><br>
+        <label for="bookauthor">Author</label><br>
+        <input type="text" id="bookauthor" class="addBookInput"><br>
+        <label for="bookgrade">Rate (1-10)</label><br>
+        <input type="number" id="bookgrade" class="addBookInput"><br>
+        <label for="bookgenre">Genre</label><br>
+        <input type="text" id="bookgenre" class="addBookInput"><br>
+        <label for="bookLength">Lenght (hours)</label><br>
+        <input type="number" id="bookLenght" class="addBookInput"><br>
+        <label for="bookpages">Release date</label><br>
+        <input type="date" id="bookpages" class="addBookInput"><br>
+        <label for="bookImage">Image</label><br>
+        <input type="file" id="bookImage2" class="chooseFileBtn"><br><br>
+        <button id="uploadBook" class="addBookBtn" >Add audiobook</button>
+      </form>
+    </div>
+  </div>
+
+
+  <div id="allUserBooks">
+    <h2 id="userbookstext" class="userBooksText">User books</h2>
+    <button id="addBookBtn" class="addToggleBtn">Add book</button>
+    
+    <button id="addAudioBookBtn" class="addToggleBtn2">Add Audiobook</button>
+    <div id="addBookContainer"></div>
+    <div class="papperbooksContainer">
+        <div id="booksprofilesida-container"></div>
+    </div>
+    <div class="audiobooksConatiner">
+        <div id="audiobooksprofilesida-container"></div>
+    </div>
+    
+  </div>
+
+  <footer>
+    <div class="bottom">
+        <img src="./images/duckFace.png" alt="Footer image" class="footImg">
+        <h4 class="footText">2022 BookDucks</h4>
+    </div>
+  </footer>
+  
+  
+  <script src="main2.js"></script>
+  <script src="profile.js"></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js" integrity="sha512-bPh3uwgU5qEMipS/VOmRqynnMXGGSRv+72H/N260MQeXZIK4PG48401Bsby9Nq5P5fz7hy5UGNmC/W1Z51h2GQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="style2.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@500&family=Poppins:wght@500&display=swap" rel="stylesheet">
+  <title>CMS projekt version 2</title>
+</head>
+<body>
+
+  <header>
+    <div class="topContainer">
+      <div class="top">
+          <img src="./images/blobgrey.svg" alt="Blob grey" id="logoBlob">
+          <img src="./images/duckFace.png" alt="" id="duckFace">
+      </div>
+      <div class="top">
+          <h1 class="bookDucksText">BookDucks</h1>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <div class="strongText">
+      <strong>User is not loggat in!</strong>
+      <button id="logoutBtn" class="logOutBtn" onclick="logOut()">Log out</button>
+    </div>  
+
+      <div id="titleH">
+        <h1 class="checkText">Check out our books and audiobooks</h1>
+      </div>
+
+      <div id="showButtons" class="showBtns">
+        <button id="allBooks" class="mainBtn">All books</button>
+        <button id="bookBtn" class="mainBtn">Books</button>
+        <button id="audioBookBtn" class="mainBtn">Audio books</button>
+        <button id="userPageBtn" class="mainBtn">
+            <a href="profile.html" >User page</a>
+        </button>
+        
+      </div>
+  </nav>
+ 
+  <main>  
+
+    <div id="paperbooks" class="papperbooksContainer"></div>
+    <div id="audiobooks" class="audiobooksConatiner"></div>
+    <div id="showAllBooks"></div>
+
+        <div id="userInfo-container"></div>
+        
+        
+          <div id="login-container" class="userInfoContainer">
+            <div class="formContainer1">
+                <img src="./images/userIcon.png" alt="Form Icon" class="formIcon">
+                <h2 class="formH loginText">Logga in</h2>
+                <hr>
+                <div>
+                    <label for="identifier">Inloggning</label><br>
+                    <input type="text" id="identifier" class="logInput">    
+                </div>
+                <div>
+                    <label for="password">Lösenord</label><br>
+                    <input type="password" id="password" class="logInput" ><br><br>
+                    <button id="loginBtn" class="formBtn loginB">Logga in</button>
+                </div>
+                
+            </div>
+            <div class="formContainer2">
+              <img src="./images/userIcon.png" alt="Form Icon" class="formIcon">
+                <h2 class="formH">Registrera dig här</h2>
+                <hr>
+                <div>
+                    <label for="registerUsername" class="regInput">Användarnamn</label><br>
+                    <input type="text" id="registerUsername" class="regInput reg">
+                </div>
+                <div>
+                    <label for="registerEmail" class="regInput">E-postadress</label><br>
+                    <input type="email" id="registerEmail" class="regInput reg">
+                </div>
+                <label for="registerPassword" class="regInput">Lösenord</label><br>
+                <input type="text" id="registerPassword" class="regInput reg"><br><br>
+                <button id="regBtn" class="formBtn regB">Registrera</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+      <div class="bottom">
+          <img src="./images/duckFace.png" alt="Footer image" class="footImg">
+          <h4 class="footText">2022 BookDucks</h4>
+      </div>
+    </footer>
+
+  <div id="allBooksToShow"></div>
+
+  <script src="main2.js"></script>
+  <script src="profile.js"></script>
+</body>
+</html>
